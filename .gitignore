@@ -1,0 +1,36 @@
+# Build and test output
+/target/
+/Results/
+/logs/
+/test-output/
+/downloads/
+
+# Claude Code (private instructions and local settings)
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# Private config and secrets
+.env
+.env.*
+*.local.properties
+secrets.properties
+*.pem
+*.key
+*.jks
+*.p12
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Other IDEs
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

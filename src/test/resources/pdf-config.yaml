@@ -1,0 +1,27 @@
+passColor: green
+failColor: red
+skipColor: orange
+
+displayFeature: true
+displayScenario: true
+displayDetailed: true
+displayAttached: true
+
+dashboardConfig:
+  title: Cucumber PDF Report
+
+featureConfig:
+  featureCount: 10
+  totalColor: blue
+  durationColor: orange
+
+scenarioConfig:
+  scenarioCount: 10
+  totalColor: blue
+  durationColor: orange
+
+noPassScenarioConfig:
+  scenarioCount: 20
+
+detailedStepHookConfig:
+  stepCount: 15
