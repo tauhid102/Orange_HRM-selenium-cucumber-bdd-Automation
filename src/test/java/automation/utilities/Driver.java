@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -71,7 +72,12 @@ public class Driver {
 		closeDriver();
 		WebDriver driver = getDriver();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigurationReader.getInt("pageLoadTimeout", 30)));
-		driver.manage().window().maximize();
+		if (ConfigurationReader.getProperty("browser", "chrome").toLowerCase().contains("headless")) {
+			// a headless browser has no screen to maximize to, and a small window collapses the OrangeHRM sidebar
+			driver.manage().window().setSize(new Dimension(1920, 1080));
+		} else {
+			driver.manage().window().maximize();
+		}
 		openApplication();
 	}
 

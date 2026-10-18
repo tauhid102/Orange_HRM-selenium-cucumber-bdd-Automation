@@ -21,4 +21,14 @@ public class DataGenerator {
 	public static String postalCode() {
 		return faker.address().zipCode();
 	}
+
+	/** Unique username (OrangeHRM needs 5 to 40 characters). */
+	public static String username() {
+		return "user" + System.currentTimeMillis();
+	}
+
+	/** Meets the OrangeHRM rules: at least 7 characters with a letter and a number. */
+	public static String password() {
+		return "Pass" + faker.number().digits(6);
+	}
 }

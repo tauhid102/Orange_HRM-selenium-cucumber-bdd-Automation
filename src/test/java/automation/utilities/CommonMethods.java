@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 /**
  * Base class for page objects and step definitions. Holds the reusable wait, click, input and verification helpers
  * so pages only describe their own elements and behaviour.
@@ -25,6 +26,7 @@ public class CommonMethods {
 	/** ------------------ Global Variables -------------------- **/
 	public static final int ELEMENT_WAIT_TIMEOUT_SECONDS = 15;
 	public static final int PAGE_LOAD_TIMEOUT_SECONDS = 30;
+	public static final int LOADING_SCREEN_TIMEOUT_SECONDS = 180;
 	public static final Logger logger = LogManager.getLogger(CommonMethods.class);
 
 	private static final ThreadLocal<SftAssert> softAssertPool = ThreadLocal.withInitial(SftAssert::new);
@@ -113,6 +115,25 @@ public class CommonMethods {
 			Thread.sleep(sec * 1000L);
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
+		}
+	}
+	
+	/** Waits up to LOADING_SCREEN_TIMEOUT_SECONDS for the page loader to disappear. Returns at once if there is none. */
+	public void waitTillLoadingScreenVanishes() {
+		By loadingImage = By.cssSelector(".oxd-form-loader, .oxd-loading-spinner");
+		if (!isElementPresent(loadingImage)) {
+			logger.info("No loading screen present, good to go");
+			return;
+		}
+		logger.info("Loading screen is present, waiting for it to vanish");
+		try {
+			new WebDriverWait(driver(), Duration.ofSeconds(LOADING_SCREEN_TIMEOUT_SECONDS))
+					.until(ExpectedConditions.invisibilityOfElementLocated(loadingImage));
+			logger.info("Loading screen vanished");
+		} catch (TimeoutException e) {
+			logger.error(LogColor.RED + "Loading screen still showing after " + LOADING_SCREEN_TIMEOUT_SECONDS
+					+ " seconds" + LogColor.RESET);
+			throw e;
 		}
 	}
 
