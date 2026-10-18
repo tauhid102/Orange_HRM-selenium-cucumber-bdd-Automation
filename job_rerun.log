@@ -1,0 +1,730 @@
+13:26:11.717 INFO  [Hooks :30]  @BeforeAll hook - runs once before the first scenario 
+13:26:12.396 INFO  [Hooks :35] ================================================================
+13:26:12.399 INFO  [Hooks :36] Scenario Title: Admin adds a record to Pay Grades
+13:26:12.400 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @smoke, @job002]
+13:26:12.400 INFO  [Hooks :38] ================================================================
+13:26:12.424 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:26:12.433 INFO  [Driver :71]  Browser Setup 
+13:26:12.435 INFO  [ConfigurationReader :24] ****************** Current Config File: Configuration.properties ******************
+13:26:12.437 INFO  [Driver :39] Launching browser: chrome-headless
+Oct 18, 2026 1:26:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 155
+Oct 18, 2026 1:26:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 155.0.8059.80. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+13:26:22.953 INFO  [Driver :88] URL Launched : https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+13:26:22.979 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:22.986 INFO  [StepNameListener :31] ================================================================
+13:26:22.986 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:26:22.987 INFO  [StepNameListener :33] ================================================================
+13:26:23.507 INFO  [Driver :88] URL Launched : https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+13:26:23.524 INFO  [LoginPage :115] Logging in as [Admin]
+13:26:26.148 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:26:26.361 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:26.363 INFO  [StepNameListener :31] ================================================================
+13:26:26.363 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:26:26.363 INFO  [StepNameListener :33] ================================================================
+13:26:26.369 INFO  [AdminPage :63] Opening the Admin menu
+13:26:27.392 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:27.486 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:27.488 INFO  [StepNameListener :31] ================================================================
+13:26:27.489 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:26:27.489 INFO  [StepNameListener :33] ================================================================
+13:26:28.106 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:26:28.390 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:28.392 INFO  [StepNameListener :31] ================================================================
+13:26:28.393 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:26:28.393 INFO  [StepNameListener :33] ================================================================
+13:26:28.404 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:26:29.655 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:29.721 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:29.723 INFO  [StepNameListener :31] ================================================================
+13:26:29.723 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:26:29.723 INFO  [StepNameListener :33] ================================================================
+13:26:30.775 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:30.856 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:30.857 INFO  [StepNameListener :31] ================================================================
+13:26:30.857 INFO  [StepNameListener :32] Executing step: Then User sees the "Add Pay Grade" section
+13:26:30.857 INFO  [StepNameListener :33] ================================================================
+13:26:31.430 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: Add Pay Grade]
+13:26:31.525 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:31.526 INFO  [StepNameListener :31] ================================================================
+13:26:31.526 INFO  [StepNameListener :32] Executing step: When User enters a new unique name in the field "Name"
+13:26:31.526 INFO  [StepNameListener :33] ================================================================
+13:26:31.789 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:31.789 INFO  [StepNameListener :31] ================================================================
+13:26:31.789 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:26:31.790 INFO  [StepNameListener :33] ================================================================
+13:26:31.798 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:32.016 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:32.018 INFO  [StepNameListener :31] ================================================================
+13:26:32.019 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:26:32.019 INFO  [StepNameListener :33] ================================================================
+13:26:32.032 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:26:32.236 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:32.237 INFO  [StepNameListener :31] ================================================================
+13:26:32.241 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:26:32.241 INFO  [StepNameListener :33] ================================================================
+13:26:32.242 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:26:32.951 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:33.054 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:33.056 INFO  [StepNameListener :31] ================================================================
+13:26:33.056 INFO  [StepNameListener :32] Executing step: Then The list shows the record
+13:26:33.056 INFO  [StepNameListener :33] ================================================================
+13:26:34.254 INFO  [SftAssert :63] Assert Passed :---------------------- [Auto1792308391527] is listed
+13:26:34.345 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:34.346 INFO  [StepNameListener :31] ================================================================
+13:26:34.347 INFO  [StepNameListener :32] Executing step: When User deletes the record
+13:26:34.347 INFO  [StepNameListener :33] ================================================================
+13:26:35.499 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:35.500 INFO  [StepNameListener :31] ================================================================
+13:26:35.500 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:26:35.500 INFO  [StepNameListener :33] ================================================================
+13:26:36.383 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Deleted
+13:26:36.657 INFO  [Hooks :69] ================================================================
+13:26:36.660 INFO  [Hooks :70] Admin adds a record to Pay Grades :- Status - PASSED
+13:26:36.660 INFO  [Hooks :71] ================================================================
+13:26:36.808 INFO  [Hooks :35] ================================================================
+13:26:36.809 INFO  [Hooks :36] Scenario Title: Pay Grades rejects a name that already exists
+13:26:36.809 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @regression, @job004]
+13:26:36.809 INFO  [Hooks :38] ================================================================
+13:26:36.816 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:26:36.823 INFO  [Driver :68]  Reusing the open browser 
+13:26:36.824 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:36.825 INFO  [StepNameListener :31] ================================================================
+13:26:36.826 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:26:36.826 INFO  [StepNameListener :33] ================================================================
+13:26:36.880 INFO  [LoginPage :92] Already logged in, skipping login
+13:26:39.064 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:26:39.421 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:39.425 INFO  [StepNameListener :31] ================================================================
+13:26:39.426 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:26:39.433 INFO  [StepNameListener :33] ================================================================
+13:26:39.438 INFO  [AdminPage :63] Opening the Admin menu
+13:26:41.215 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:41.299 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:41.300 INFO  [StepNameListener :31] ================================================================
+13:26:41.300 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:26:41.300 INFO  [StepNameListener :33] ================================================================
+13:26:42.423 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:26:42.548 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:42.549 INFO  [StepNameListener :31] ================================================================
+13:26:42.549 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:26:42.549 INFO  [StepNameListener :33] ================================================================
+13:26:42.550 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:26:44.365 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:44.471 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:44.471 INFO  [StepNameListener :31] ================================================================
+13:26:44.472 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:26:44.472 INFO  [StepNameListener :33] ================================================================
+13:26:45.715 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:45.820 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:45.820 INFO  [StepNameListener :31] ================================================================
+13:26:45.822 INFO  [StepNameListener :32] Executing step: And User enters a new unique name in the field "Name"
+13:26:45.822 INFO  [StepNameListener :33] ================================================================
+13:26:46.732 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:46.733 INFO  [StepNameListener :31] ================================================================
+13:26:46.733 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:26:46.734 INFO  [StepNameListener :33] ================================================================
+13:26:46.743 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:47.077 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:47.083 INFO  [StepNameListener :31] ================================================================
+13:26:47.083 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:26:47.085 INFO  [StepNameListener :33] ================================================================
+13:26:47.101 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:26:47.243 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:47.245 INFO  [StepNameListener :31] ================================================================
+13:26:47.246 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:26:47.246 INFO  [StepNameListener :33] ================================================================
+13:26:47.248 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:26:49.929 INFO  [CommonMethods :125] No loading screen present, good to go
+13:26:50.033 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:50.034 INFO  [StepNameListener :31] ================================================================
+13:26:50.034 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:26:50.035 INFO  [StepNameListener :33] ================================================================
+13:26:50.739 INFO  [CommonMethods :128] Loading screen is present, waiting for it to vanish
+13:26:51.278 INFO  [CommonMethods :132] Loading screen vanished
+13:26:51.395 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:51.397 INFO  [StepNameListener :31] ================================================================
+13:26:51.399 INFO  [StepNameListener :32] Executing step: And User enters the same name again in the field "Name"
+13:26:51.399 INFO  [StepNameListener :33] ================================================================
+13:26:51.731 INFO  [Hooks :50]  @BeforeStep hook 
+13:26:51.731 INFO  [StepNameListener :31] ================================================================
+13:26:51.732 INFO  [StepNameListener :32] Executing step: Then The field "Name" shows the error "Already exists"
+13:26:51.732 INFO  [StepNameListener :33] ================================================================
+13:27:06.750 WARN  [AdminPage :269] Error under [Name] was not [Already exists]
+13:27:06.766 ERROR [SftAssert :69] Assert Failed :------------------------ Error under [Name] [Expected: Already exists, Actual: (no error shown)]
+13:27:06.990 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:06.991 INFO  [StepNameListener :31] ================================================================
+13:27:06.991 INFO  [StepNameListener :32] Executing step: When User clicks the Cancel button
+13:27:06.992 INFO  [StepNameListener :33] ================================================================
+13:27:07.675 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:07.781 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:07.783 INFO  [StepNameListener :31] ================================================================
+13:27:07.783 INFO  [StepNameListener :32] Executing step: And User deletes the record
+13:27:07.783 INFO  [StepNameListener :33] ================================================================
+13:27:09.792 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:09.793 INFO  [StepNameListener :31] ================================================================
+13:27:09.793 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:27:09.793 INFO  [StepNameListener :33] ================================================================
+13:27:10.346 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Deleted
+13:27:10.505 INFO  [Hooks :69] ================================================================
+13:27:10.507 INFO  [Hooks :70] Pay Grades rejects a name that already exists :- Status - PASSED
+13:27:10.507 INFO  [Hooks :71] ================================================================
+13:27:10.557 INFO  [Hooks :35] ================================================================
+13:27:10.557 INFO  [Hooks :36] Scenario Title: Admin edits a record in Job Titles
+13:27:10.557 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @regression, @job006]
+13:27:10.557 INFO  [Hooks :38] ================================================================
+13:27:10.559 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:27:10.561 INFO  [Driver :68]  Reusing the open browser 
+13:27:10.563 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:10.564 INFO  [StepNameListener :31] ================================================================
+13:27:10.565 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:27:10.565 INFO  [StepNameListener :33] ================================================================
+13:27:10.584 INFO  [LoginPage :92] Already logged in, skipping login
+13:27:11.569 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:27:11.692 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:11.693 INFO  [StepNameListener :31] ================================================================
+13:27:11.693 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:27:11.693 INFO  [StepNameListener :33] ================================================================
+13:27:11.694 INFO  [AdminPage :63] Opening the Admin menu
+13:27:12.654 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:12.741 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:12.742 INFO  [StepNameListener :31] ================================================================
+13:27:12.743 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:27:12.743 INFO  [StepNameListener :33] ================================================================
+13:27:13.319 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:27:13.416 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:13.417 INFO  [StepNameListener :31] ================================================================
+13:27:13.417 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Job Titles"
+13:27:13.417 INFO  [StepNameListener :33] ================================================================
+13:27:13.418 INFO  [JobPage :38] Opening Admin > Job > Job Titles
+13:27:14.637 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:14.722 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:14.723 INFO  [StepNameListener :31] ================================================================
+13:27:14.724 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:27:14.725 INFO  [StepNameListener :33] ================================================================
+13:27:15.866 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:15.958 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:15.959 INFO  [StepNameListener :31] ================================================================
+13:27:15.959 INFO  [StepNameListener :32] Executing step: And User enters a new unique name in the field "Job Title"
+13:27:15.959 INFO  [StepNameListener :33] ================================================================
+13:27:16.764 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:16.764 INFO  [StepNameListener :31] ================================================================
+13:27:16.766 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:27:16.766 INFO  [StepNameListener :33] ================================================================
+13:27:16.766 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:16.987 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:16.987 INFO  [StepNameListener :31] ================================================================
+13:27:16.988 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:27:16.988 INFO  [StepNameListener :33] ================================================================
+13:27:20.989 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:27:21.075 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:21.076 INFO  [StepNameListener :31] ================================================================
+13:27:21.076 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Job Titles"
+13:27:21.076 INFO  [StepNameListener :33] ================================================================
+13:27:21.077 INFO  [JobPage :38] Opening Admin > Job > Job Titles
+13:27:22.704 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:22.804 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:22.804 INFO  [StepNameListener :31] ================================================================
+13:27:22.804 INFO  [StepNameListener :32] Executing step: And User opens the record for editing
+13:27:22.805 INFO  [StepNameListener :33] ================================================================
+13:27:24.548 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:24.638 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:24.639 INFO  [StepNameListener :31] ================================================================
+13:27:24.639 INFO  [StepNameListener :32] Executing step: And User renames the record in the field "Job Title"
+13:27:24.639 INFO  [StepNameListener :33] ================================================================
+13:27:24.647 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:26.008 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:26.010 INFO  [StepNameListener :31] ================================================================
+13:27:26.010 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:27:26.010 INFO  [StepNameListener :33] ================================================================
+13:27:26.017 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:26.220 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:26.221 INFO  [StepNameListener :31] ================================================================
+13:27:26.221 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Updated" is displayed
+13:27:26.221 INFO  [StepNameListener :33] ================================================================
+13:27:27.802 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Updated
+13:27:27.917 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:27.918 INFO  [StepNameListener :31] ================================================================
+13:27:27.918 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Job Titles"
+13:27:27.918 INFO  [StepNameListener :33] ================================================================
+13:27:27.918 INFO  [JobPage :38] Opening Admin > Job > Job Titles
+13:27:29.026 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:29.123 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:29.124 INFO  [StepNameListener :31] ================================================================
+13:27:29.124 INFO  [StepNameListener :32] Executing step: Then The list shows the record
+13:27:29.125 INFO  [StepNameListener :33] ================================================================
+13:27:30.321 INFO  [SftAssert :63] Assert Passed :---------------------- [Auto1792308444640] is listed
+13:27:30.404 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:30.405 INFO  [StepNameListener :31] ================================================================
+13:27:30.405 INFO  [StepNameListener :32] Executing step: When User deletes the record
+13:27:30.406 INFO  [StepNameListener :33] ================================================================
+13:27:31.274 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:31.275 INFO  [StepNameListener :31] ================================================================
+13:27:31.275 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:27:31.275 INFO  [StepNameListener :33] ================================================================
+13:27:31.823 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Deleted
+13:27:31.946 INFO  [Hooks :69] ================================================================
+13:27:31.947 INFO  [Hooks :70] Admin edits a record in Job Titles :- Status - PASSED
+13:27:31.947 INFO  [Hooks :71] ================================================================
+13:27:31.963 INFO  [Hooks :35] ================================================================
+13:27:31.964 INFO  [Hooks :36] Scenario Title: Admin edits a record in Pay Grades
+13:27:31.964 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @regression, @job006]
+13:27:31.964 INFO  [Hooks :38] ================================================================
+13:27:31.965 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:27:31.966 INFO  [Driver :68]  Reusing the open browser 
+13:27:31.967 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:31.967 INFO  [StepNameListener :31] ================================================================
+13:27:31.967 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:27:31.967 INFO  [StepNameListener :33] ================================================================
+13:27:31.984 INFO  [LoginPage :92] Already logged in, skipping login
+13:27:32.956 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:27:33.064 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:33.065 INFO  [StepNameListener :31] ================================================================
+13:27:33.065 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:27:33.065 INFO  [StepNameListener :33] ================================================================
+13:27:33.066 INFO  [AdminPage :63] Opening the Admin menu
+13:27:34.018 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:34.097 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:34.098 INFO  [StepNameListener :31] ================================================================
+13:27:34.098 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:27:34.098 INFO  [StepNameListener :33] ================================================================
+13:27:34.674 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:27:34.783 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:34.784 INFO  [StepNameListener :31] ================================================================
+13:27:34.784 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:27:34.784 INFO  [StepNameListener :33] ================================================================
+13:27:34.784 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:27:35.901 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:35.986 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:35.987 INFO  [StepNameListener :31] ================================================================
+13:27:35.987 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:27:35.988 INFO  [StepNameListener :33] ================================================================
+13:27:37.064 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:37.166 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:37.166 INFO  [StepNameListener :31] ================================================================
+13:27:37.166 INFO  [StepNameListener :32] Executing step: And User enters a new unique name in the field "Name"
+13:27:37.167 INFO  [StepNameListener :33] ================================================================
+13:27:37.922 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:37.922 INFO  [StepNameListener :31] ================================================================
+13:27:37.922 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:27:37.922 INFO  [StepNameListener :33] ================================================================
+13:27:37.929 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:38.144 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:38.145 INFO  [StepNameListener :31] ================================================================
+13:27:38.146 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:27:38.146 INFO  [StepNameListener :33] ================================================================
+13:27:38.156 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:27:38.282 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:38.282 INFO  [StepNameListener :31] ================================================================
+13:27:38.282 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:27:38.282 INFO  [StepNameListener :33] ================================================================
+13:27:38.282 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:27:39.690 INFO  [CommonMethods :125] No loading screen present, good to go
+13:27:39.769 INFO  [Hooks :50]  @BeforeStep hook 
+13:27:39.770 INFO  [StepNameListener :31] ================================================================
+13:27:39.770 INFO  [StepNameListener :32] Executing step: And User opens the record for editing
+13:27:39.770 INFO  [StepNameListener :33] ================================================================
+13:27:55.234 INFO  [JobPage :169] Row changed while clicking, retrying
+13:28:10.674 INFO  [JobPage :169] Row changed while clicking, retrying
+13:28:26.270 INFO  [StepNameListener :31] ================================================================
+13:28:26.270 INFO  [StepNameListener :32] Executing step: And User renames the record in the field "Name"
+13:28:26.270 INFO  [StepNameListener :33] ================================================================
+13:28:26.275 INFO  [StepNameListener :31] ================================================================
+13:28:26.275 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:28:26.277 INFO  [StepNameListener :33] ================================================================
+13:28:26.277 INFO  [StepNameListener :31] ================================================================
+13:28:26.277 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Updated" is displayed
+13:28:26.277 INFO  [StepNameListener :33] ================================================================
+13:28:26.279 INFO  [StepNameListener :31] ================================================================
+13:28:26.279 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:28:26.279 INFO  [StepNameListener :33] ================================================================
+13:28:26.279 INFO  [StepNameListener :31] ================================================================
+13:28:26.279 INFO  [StepNameListener :32] Executing step: Then The list shows the record
+13:28:26.279 INFO  [StepNameListener :33] ================================================================
+13:28:26.279 INFO  [StepNameListener :31] ================================================================
+13:28:26.279 INFO  [StepNameListener :32] Executing step: When User deletes the record
+13:28:26.279 INFO  [StepNameListener :33] ================================================================
+13:28:26.279 INFO  [StepNameListener :31] ================================================================
+13:28:26.279 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:28:26.279 INFO  [StepNameListener :33] ================================================================
+13:28:26.279 INFO  [Hooks :69] ================================================================
+13:28:26.279 INFO  [Hooks :70] Admin edits a record in Pay Grades :- Status - FAILED
+13:28:26.279 INFO  [Hooks :71] ================================================================
+13:28:26.302 INFO  [Hooks :35] ================================================================
+13:28:26.302 INFO  [Hooks :36] Scenario Title: Admin edits a record in Employment Status
+13:28:26.302 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @regression, @job006]
+13:28:26.302 INFO  [Hooks :38] ================================================================
+13:28:26.302 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:28:26.304 INFO  [Driver :68]  Reusing the open browser 
+13:28:26.304 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:26.304 INFO  [StepNameListener :31] ================================================================
+13:28:26.306 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:28:26.306 INFO  [StepNameListener :33] ================================================================
+13:28:26.322 INFO  [LoginPage :92] Already logged in, skipping login
+13:28:27.312 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:28:27.433 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:27.435 INFO  [StepNameListener :31] ================================================================
+13:28:27.435 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:28:27.435 INFO  [StepNameListener :33] ================================================================
+13:28:27.436 INFO  [AdminPage :63] Opening the Admin menu
+13:28:28.301 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:28.362 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:28.363 INFO  [StepNameListener :31] ================================================================
+13:28:28.363 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:28:28.363 INFO  [StepNameListener :33] ================================================================
+13:28:28.934 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:28:29.076 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:29.078 INFO  [StepNameListener :31] ================================================================
+13:28:29.078 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Employment Status"
+13:28:29.078 INFO  [StepNameListener :33] ================================================================
+13:28:29.078 INFO  [JobPage :38] Opening Admin > Job > Employment Status
+13:28:30.217 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:30.278 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:30.279 INFO  [StepNameListener :31] ================================================================
+13:28:30.279 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:28:30.279 INFO  [StepNameListener :33] ================================================================
+13:28:31.300 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:31.379 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:31.380 INFO  [StepNameListener :31] ================================================================
+13:28:31.380 INFO  [StepNameListener :32] Executing step: And User enters a new unique name in the field "Name"
+13:28:31.380 INFO  [StepNameListener :33] ================================================================
+13:28:32.095 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:32.095 INFO  [StepNameListener :31] ================================================================
+13:28:32.095 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:28:32.095 INFO  [StepNameListener :33] ================================================================
+13:28:32.110 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:32.297 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:32.297 INFO  [StepNameListener :31] ================================================================
+13:28:32.298 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:28:32.298 INFO  [StepNameListener :33] ================================================================
+13:28:36.287 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:28:36.361 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:36.362 INFO  [StepNameListener :31] ================================================================
+13:28:36.362 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Employment Status"
+13:28:36.362 INFO  [StepNameListener :33] ================================================================
+13:28:36.362 INFO  [JobPage :38] Opening Admin > Job > Employment Status
+13:28:38.016 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:38.079 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:38.079 INFO  [StepNameListener :31] ================================================================
+13:28:38.080 INFO  [StepNameListener :32] Executing step: And User opens the record for editing
+13:28:38.080 INFO  [StepNameListener :33] ================================================================
+13:28:39.683 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:39.744 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:39.745 INFO  [StepNameListener :31] ================================================================
+13:28:39.745 INFO  [StepNameListener :32] Executing step: And User renames the record in the field "Name"
+13:28:39.745 INFO  [StepNameListener :33] ================================================================
+13:28:39.752 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:41.056 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:41.056 INFO  [StepNameListener :31] ================================================================
+13:28:41.056 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:28:41.056 INFO  [StepNameListener :33] ================================================================
+13:28:41.063 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:41.253 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:41.254 INFO  [StepNameListener :31] ================================================================
+13:28:41.254 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Updated" is displayed
+13:28:41.254 INFO  [StepNameListener :33] ================================================================
+13:28:42.822 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Updated
+13:28:42.926 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:42.926 INFO  [StepNameListener :31] ================================================================
+13:28:42.926 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Employment Status"
+13:28:42.926 INFO  [StepNameListener :33] ================================================================
+13:28:42.928 INFO  [JobPage :38] Opening Admin > Job > Employment Status
+13:28:44.639 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:44.714 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:44.715 INFO  [StepNameListener :31] ================================================================
+13:28:44.715 INFO  [StepNameListener :32] Executing step: Then The list shows the record
+13:28:44.715 INFO  [StepNameListener :33] ================================================================
+13:28:46.996 INFO  [SftAssert :63] Assert Passed :---------------------- [Auto1792308519746] is listed
+13:28:47.087 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:47.088 INFO  [StepNameListener :31] ================================================================
+13:28:47.088 INFO  [StepNameListener :32] Executing step: When User deletes the record
+13:28:47.088 INFO  [StepNameListener :33] ================================================================
+13:28:47.959 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:47.960 INFO  [StepNameListener :31] ================================================================
+13:28:47.960 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:28:47.960 INFO  [StepNameListener :33] ================================================================
+13:28:49.031 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Deleted
+13:28:49.142 INFO  [Hooks :69] ================================================================
+13:28:49.142 INFO  [Hooks :70] Admin edits a record in Employment Status :- Status - PASSED
+13:28:49.142 INFO  [Hooks :71] ================================================================
+13:28:49.157 INFO  [Hooks :35] ================================================================
+13:28:49.157 INFO  [Hooks :36] Scenario Title: Admin edits a record in Job Categories
+13:28:49.157 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @regression, @job006]
+13:28:49.157 INFO  [Hooks :38] ================================================================
+13:28:49.158 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:28:49.159 INFO  [Driver :68]  Reusing the open browser 
+13:28:49.162 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:49.163 INFO  [StepNameListener :31] ================================================================
+13:28:49.163 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:28:49.163 INFO  [StepNameListener :33] ================================================================
+13:28:49.179 INFO  [LoginPage :92] Already logged in, skipping login
+13:28:52.374 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:28:52.492 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:52.492 INFO  [StepNameListener :31] ================================================================
+13:28:52.492 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:28:52.492 INFO  [StepNameListener :33] ================================================================
+13:28:52.492 INFO  [AdminPage :63] Opening the Admin menu
+13:28:55.751 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:55.846 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:55.847 INFO  [StepNameListener :31] ================================================================
+13:28:55.847 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:28:55.847 INFO  [StepNameListener :33] ================================================================
+13:28:56.408 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:28:56.523 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:56.524 INFO  [StepNameListener :31] ================================================================
+13:28:56.524 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Job Categories"
+13:28:56.524 INFO  [StepNameListener :33] ================================================================
+13:28:56.524 INFO  [JobPage :38] Opening Admin > Job > Job Categories
+13:28:58.722 INFO  [CommonMethods :125] No loading screen present, good to go
+13:28:58.779 INFO  [Hooks :50]  @BeforeStep hook 
+13:28:58.779 INFO  [StepNameListener :31] ================================================================
+13:28:58.779 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:28:58.779 INFO  [StepNameListener :33] ================================================================
+13:29:00.947 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:01.029 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:01.029 INFO  [StepNameListener :31] ================================================================
+13:29:01.030 INFO  [StepNameListener :32] Executing step: And User enters a new unique name in the field "Name"
+13:29:01.030 INFO  [StepNameListener :33] ================================================================
+13:29:02.798 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:02.798 INFO  [StepNameListener :31] ================================================================
+13:29:02.799 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:29:02.799 INFO  [StepNameListener :33] ================================================================
+13:29:02.804 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:03.018 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:03.019 INFO  [StepNameListener :31] ================================================================
+13:29:03.019 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:29:03.019 INFO  [StepNameListener :33] ================================================================
+13:29:10.333 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:29:10.396 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:10.396 INFO  [StepNameListener :31] ================================================================
+13:29:10.396 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Job Categories"
+13:29:10.397 INFO  [StepNameListener :33] ================================================================
+13:29:10.397 INFO  [JobPage :38] Opening Admin > Job > Job Categories
+13:29:14.635 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:14.722 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:14.722 INFO  [StepNameListener :31] ================================================================
+13:29:14.722 INFO  [StepNameListener :32] Executing step: And User opens the record for editing
+13:29:14.722 INFO  [StepNameListener :33] ================================================================
+13:29:18.843 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:18.933 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:18.934 INFO  [StepNameListener :31] ================================================================
+13:29:18.934 INFO  [StepNameListener :32] Executing step: And User renames the record in the field "Name"
+13:29:18.934 INFO  [StepNameListener :33] ================================================================
+13:29:18.941 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:21.355 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:21.356 INFO  [StepNameListener :31] ================================================================
+13:29:21.357 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:29:21.357 INFO  [StepNameListener :33] ================================================================
+13:29:21.367 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:21.595 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:21.596 INFO  [StepNameListener :31] ================================================================
+13:29:21.597 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Updated" is displayed
+13:29:21.597 INFO  [StepNameListener :33] ================================================================
+13:29:24.262 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Updated
+13:29:24.398 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:24.399 INFO  [StepNameListener :31] ================================================================
+13:29:24.399 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Job Categories"
+13:29:24.399 INFO  [StepNameListener :33] ================================================================
+13:29:24.399 INFO  [JobPage :38] Opening Admin > Job > Job Categories
+13:29:25.551 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:25.636 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:25.636 INFO  [StepNameListener :31] ================================================================
+13:29:25.637 INFO  [StepNameListener :32] Executing step: Then The list shows the record
+13:29:25.637 INFO  [StepNameListener :33] ================================================================
+13:29:26.763 INFO  [SftAssert :63] Assert Passed :---------------------- [Auto1792308558935] is listed
+13:29:26.845 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:26.846 INFO  [StepNameListener :31] ================================================================
+13:29:26.846 INFO  [StepNameListener :32] Executing step: When User deletes the record
+13:29:26.846 INFO  [StepNameListener :33] ================================================================
+13:29:27.714 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:27.718 INFO  [StepNameListener :31] ================================================================
+13:29:27.722 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:29:27.724 INFO  [StepNameListener :33] ================================================================
+13:29:28.794 INFO  [SftAssert :63] Assert Passed :---------------------- Success message displayed: Successfully Deleted
+13:29:28.906 INFO  [Hooks :69] ================================================================
+13:29:28.906 INFO  [Hooks :70] Admin edits a record in Job Categories :- Status - PASSED
+13:29:28.907 INFO  [Hooks :71] ================================================================
+13:29:28.922 INFO  [Hooks :35] ================================================================
+13:29:28.922 INFO  [Hooks :36] Scenario Title: Admin deletes a record from Pay Grades
+13:29:28.922 INFO  [Hooks :37] Tags: [@admin, @ui, @job, @regression, @job007]
+13:29:28.922 INFO  [Hooks :38] ================================================================
+13:29:28.923 INFO  [Hooks :44]  @Before hook - launching browser if not already open 
+13:29:28.924 INFO  [Driver :68]  Reusing the open browser 
+13:29:28.925 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:28.925 INFO  [StepNameListener :31] ================================================================
+13:29:28.925 INFO  [StepNameListener :32] Executing step: Given User is logged in as "standard"
+13:29:28.925 INFO  [StepNameListener :33] ================================================================
+13:29:28.942 INFO  [LoginPage :92] Already logged in, skipping login
+13:29:29.908 INFO  [SftAssert :63] Assert Passed :---------------------- Page heading [Value: Dashboard]
+13:29:30.059 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:30.060 INFO  [StepNameListener :31] ================================================================
+13:29:30.060 INFO  [StepNameListener :32] Executing step: When User navigates to the Admin menu
+13:29:30.060 INFO  [StepNameListener :33] ================================================================
+13:29:30.060 INFO  [AdminPage :63] Opening the Admin menu
+13:29:30.927 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:31.003 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:31.004 INFO  [StepNameListener :31] ================================================================
+13:29:31.004 INFO  [StepNameListener :32] Executing step: Then User sees the "System Users" section
+13:29:31.004 INFO  [StepNameListener :33] ================================================================
+13:29:31.601 INFO  [SftAssert :63] Assert Passed :---------------------- Section title [Value: System Users]
+13:29:31.761 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:31.761 INFO  [StepNameListener :31] ================================================================
+13:29:31.762 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:29:31.762 INFO  [StepNameListener :33] ================================================================
+13:29:31.764 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:29:32.869 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:32.953 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:32.953 INFO  [StepNameListener :31] ================================================================
+13:29:32.953 INFO  [StepNameListener :32] Executing step: And User clicks the Add button
+13:29:32.953 INFO  [StepNameListener :33] ================================================================
+13:29:33.983 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:34.074 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:34.074 INFO  [StepNameListener :31] ================================================================
+13:29:34.074 INFO  [StepNameListener :32] Executing step: And User enters a new unique name in the field "Name"
+13:29:34.074 INFO  [StepNameListener :33] ================================================================
+13:29:34.840 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:34.840 INFO  [StepNameListener :31] ================================================================
+13:29:34.840 INFO  [StepNameListener :32] Executing step: And User saves the record
+13:29:34.840 INFO  [StepNameListener :33] ================================================================
+13:29:34.846 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:35.030 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:35.031 INFO  [StepNameListener :31] ================================================================
+13:29:35.031 INFO  [StepNameListener :32] Executing step: Then The record is saved
+13:29:35.031 INFO  [StepNameListener :33] ================================================================
+13:29:35.040 INFO  [SftAssert :63] Assert Passed :---------------------- The record was saved and the Add form was closed
+13:29:35.180 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:35.180 INFO  [StepNameListener :31] ================================================================
+13:29:35.180 INFO  [StepNameListener :32] Executing step: When User opens the Job page "Pay Grades"
+13:29:35.182 INFO  [StepNameListener :33] ================================================================
+13:29:35.182 INFO  [JobPage :38] Opening Admin > Job > Pay Grades
+13:29:36.671 INFO  [CommonMethods :125] No loading screen present, good to go
+13:29:36.759 INFO  [Hooks :50]  @BeforeStep hook 
+13:29:36.759 INFO  [StepNameListener :31] ================================================================
+13:29:36.759 INFO  [StepNameListener :32] Executing step: And User deletes the record
+13:29:36.759 INFO  [StepNameListener :33] ================================================================
+13:29:51.807 INFO  [JobPage :169] Row changed while clicking, retrying
+13:30:07.245 INFO  [JobPage :169] Row changed while clicking, retrying
+13:30:22.824 INFO  [StepNameListener :31] ================================================================
+13:30:22.824 INFO  [StepNameListener :32] Executing step: Then Success message "Successfully Deleted" is displayed
+13:30:22.824 INFO  [StepNameListener :33] ================================================================
+13:30:22.826 INFO  [StepNameListener :31] ================================================================
+13:30:22.826 INFO  [StepNameListener :32] Executing step: And The list does not show the record
+13:30:22.826 INFO  [StepNameListener :33] ================================================================
+13:30:22.826 INFO  [Hooks :69] ================================================================
+13:30:22.826 INFO  [Hooks :70] Admin deletes a record from Pay Grades :- Status - FAILED
+13:30:22.826 INFO  [Hooks :71] ================================================================
+13:30:22.839 INFO  [Hooks :91]  @AfterAll hook - runs once after the last scenario 
+
+Failed scenarios:
+file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:76 # Pay Grades rejects a name that already exists
+file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:114 # Admin edits a record in Pay Grades
+file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:133 # Admin deletes a record from Pay Grades
+
+7 Scenarios (3 failed, 4 passed)
+108 Steps (2 failed, 9 skipped, 97 passed)
+4m13.368s
+
+
+java.lang.AssertionError: The following 1 check(s) failed:
+ - Error under [Name] [Expected: Already exists, Actual: (no error shown)]
+	at automation.utilities.SftAssert.assertAll(SftAssert.java:57)
+	at automation.hooks.Hooks.after(Hooks.java:67)
+
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for automation.pages.JobPage$$Lambda/0x000002133642dbb0@4aadf144 (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.80, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\tauhi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63119}, goog:processID: 9488, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63119/devtoo..., se:cdpVersion: 155.0.8059.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d5de48bd7ce8da1b1208bbee74bd080
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.pages.JobPage.rowOf(JobPage.java:118)
+	at automation.pages.JobPage.clickRowButton(JobPage.java:163)
+	at automation.pages.JobPage.editRecord(JobPage.java:175)
+	at automation.step_definitions.Job_SD.user_opens_the_record_for_editing(Job_SD.java:48)
+	at ✽.User opens the record for editing(file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:102)
+
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for automation.pages.JobPage$$Lambda/0x000002133642dbb0@25c6a9de (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.80, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\tauhi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63119}, goog:processID: 9488, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63119/devtoo..., se:cdpVersion: 155.0.8059.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d5de48bd7ce8da1b1208bbee74bd080
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.pages.JobPage.rowOf(JobPage.java:118)
+	at automation.pages.JobPage.clickRowButton(JobPage.java:163)
+	at automation.pages.JobPage.deleteRecord(JobPage.java:180)
+	at automation.step_definitions.Job_SD.user_deletes_the_record(Job_SD.java:59)
+	at ✽.User deletes the record(file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:126)
+
+
+[ERROR] Tests run: 7, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 275.6 s <<< FAILURE! -- in automation.runners.TestRunner
+[ERROR] Admin - Job.Pay Grades rejects a name that already exists -- Time elapsed: 33.83 s <<< FAILURE!
+java.lang.AssertionError: 
+The following 1 check(s) failed:
+ - Error under [Name] [Expected: Already exists, Actual: (no error shown)]
+	at automation.utilities.SftAssert.assertAll(SftAssert.java:57)
+	at automation.hooks.Hooks.after(Hooks.java:67)
+
+[ERROR] Admin - Job.Admin edits a record in Pay Grades -- Time elapsed: 54.34 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for automation.pages.JobPage$$Lambda/0x000002133642dbb0@4aadf144 (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.80, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\tauhi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63119}, goog:processID: 9488, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63119/devtoo..., se:cdpVersion: 155.0.8059.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d5de48bd7ce8da1b1208bbee74bd080
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.pages.JobPage.rowOf(JobPage.java:118)
+	at automation.pages.JobPage.clickRowButton(JobPage.java:163)
+	at automation.pages.JobPage.editRecord(JobPage.java:175)
+	at automation.step_definitions.Job_SD.user_opens_the_record_for_editing(Job_SD.java:48)
+	at ✽.User opens the record for editing(file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:102)
+
+[ERROR] Admin - Job.Admin deletes a record from Pay Grades -- Time elapsed: 53.92 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for automation.pages.JobPage$$Lambda/0x000002133642dbb0@25c6a9de (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.80, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\tauhi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63119}, goog:processID: 9488, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63119/devtoo..., se:cdpVersion: 155.0.8059.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d5de48bd7ce8da1b1208bbee74bd080
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.pages.JobPage.rowOf(JobPage.java:118)
+	at automation.pages.JobPage.clickRowButton(JobPage.java:163)
+	at automation.pages.JobPage.deleteRecord(JobPage.java:180)
+	at automation.step_definitions.Job_SD.user_deletes_the_record(Job_SD.java:59)
+	at ✽.User deletes the record(file:///E:/Orange_HRM-selenium-cucumber-bdd-Automation/src/test/resources/features/1_Admin/Job.feature:126)
+
+[ERROR] Failures: 
+[ERROR]   The following 1 check(s) failed:
+ - Error under [Name] [Expected: Already exists, Actual: (no error shown)]
+[ERROR] Errors: 
+[ERROR]   Expected condition failed: waiting for automation.pages.JobPage$$Lambda/0x000002133642dbb0@25c6a9de (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.80, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\tauhi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63119}, goog:processID: 9488, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63119/devtoo..., se:cdpVersion: 155.0.8059.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d5de48bd7ce8da1b1208bbee74bd080
+[ERROR]   Expected condition failed: waiting for automation.pages.JobPage$$Lambda/0x000002133642dbb0@4aadf144 (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.80, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\tauhi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63119}, goog:processID: 9488, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63119/devtoo..., se:cdpVersion: 155.0.8059.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d5de48bd7ce8da1b1208bbee74bd080
+[ERROR] Tests run: 7, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.3.0:test (default-test) on project orangehrm-automation-selenium-cucumber: There are test failures.
+[ERROR] 
+[ERROR] Please refer to E:\Orange_HRM-selenium-cucumber-bdd-Automation\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

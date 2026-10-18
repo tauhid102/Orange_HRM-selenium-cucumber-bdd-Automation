@@ -2,10 +2,15 @@ package automation.pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import automation.utilities.CommonMethods;
 import automation.utilities.ConfigurationReader;
@@ -56,9 +61,22 @@ public class LoginPage extends CommonMethods {
 		login(username, ConfigurationReader.getProperty("password"));
 	}
 
-	/** True when the browser holds a logged in session (OrangeHRM keeps it in the "orangehrm" cookie). */
+	/**
+	 * True when the browser holds a logged in session. The "orangehrm" cookie alone is not enough: the server sets it
+	 * as soon as the login page loads, so the browser must also be away from the login page and show the user menu.
+	 */
 	public boolean isLoggedIn() {
-		return driver().manage().getCookieNamed(SESSION_COOKIE) != null;
+		if (driver().manage().getCookieNamed(SESSION_COOKIE) == null || driver().getCurrentUrl().contains(LOGIN_PATH)) {
+			return false;
+		}
+		// the page may still be loading after the previous scenario, so give the user menu time to show up
+		try {
+			new WebDriverWait(driver(), Duration.ofSeconds(10))
+					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".oxd-userdropdown-tab")));
+			return true;
+		} catch (TimeoutException e) {
+			return false;
+		}
 	}
 
 	/**
